@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import feather from "feather-icons";
 import { useToast, TwButton, TwInput } from "vue3-tailwind";
 
@@ -18,7 +18,7 @@ const filteredIcon = computed(() => {
 });
 
 const composableText = useText();
-const copyText = (text: string) => {
+const copyText = (text) => {
   if (composableText.copy(text)) {
     toast.success({
       message: `${text} copied to clipboard!`,

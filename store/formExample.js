@@ -9,9 +9,7 @@ const composableForm = useForm();
 export const useFormExample = defineStore("formExample", () => {
   const formName = "formExample";
 
-  const formData: {
-    [key: string]: any;
-  } = reactive({
+  const formData = reactive({
     fileModel: null,
     selectExample: null,
     multiSelectExample: null,
@@ -25,7 +23,7 @@ export const useFormExample = defineStore("formExample", () => {
       "required",
       "string",
       "test",
-      (value: string) => {
+      (value) => {
         const MIN_LENGTH = 15;
         if (!value || value.length < MIN_LENGTH) {
           return `Min length is ${MIN_LENGTH}, current length is ${value.length}`;
@@ -36,7 +34,7 @@ export const useFormExample = defineStore("formExample", () => {
     toggleExample: [
       "required",
       "boolean",
-      (value: string) => {
+      (value) => {
         if (!value) return "Value must be true";
       },
     ],

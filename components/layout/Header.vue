@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { TwButton, TwDropdownMenu, TwFeather } from "vue3-tailwind";
 import { useSidebarStore } from "~~/store/sidebar";
 

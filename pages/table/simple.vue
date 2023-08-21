@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { TwDatatableClient, TwButton } from "vue3-tailwind";
 import { onMounted, ref } from "vue";
 const data = ref({
@@ -61,7 +61,7 @@ const data = ref({
   },
 });
 
-const datatableHook = (arg: any) => {
+const datatableHook = (arg) => {
   arg();
 };
 

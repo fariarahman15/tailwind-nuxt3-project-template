@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { ref } from "vue";
 import { DatatableColumn, DatatableData, TwButton, TwDatatableServer } from "vue3-tailwind";
 const data = ref({
@@ -27,8 +27,8 @@ const data = ref({
       width: "400px",
       sortable: false,
     },
-  ] as Array<DatatableColumn>,
-  data: [] as Array<DatatableData>,
+  ] ,
+  data: [] ,
   limit: 5,
   offset: 0,
   search: "",
@@ -83,14 +83,13 @@ const fetchData = async () => {
 };
 
 
-const sortClick = (event: any) => {
+const sortClick = (event) => {
   const sortBy = data.value.sortBy
   const sortType = data.value.sortType
   const sortByNew = event
   const sortTypeNew = event === sortBy ? (sortType === 'asc' ? 'desc' : 'asc') : 'asc'
   data.value = { ...data.value, sortBy: sortByNew, sortType: sortTypeNew }
 }
-
 </script>
 
 <template>

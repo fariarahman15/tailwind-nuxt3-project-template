@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import {
   TwForm,
   TwButton,
@@ -93,9 +93,7 @@ const formExample = useFormExample();
           >
             Reset
           </TwButton>
-          <TwButton variant="primary" class="px-4">
-            Submit
-          </TwButton>
+          <TwButton variant="primary" class="px-4"> Submit </TwButton>
         </div>
       </TwForm>
     </div>

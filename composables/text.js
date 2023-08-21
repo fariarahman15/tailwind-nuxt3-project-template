@@ -1,11 +1,11 @@
 export const useText = () => {
-  const copy = (text: string): void | boolean => {
+  const copy = (text) => {
     if (!text) return;
     navigator.clipboard.writeText(text);
-    return true
-  }
+    return true;
+  };
 
   return {
-    copy
-  }
-}
+    copy,
+  };
+};
